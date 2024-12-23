@@ -19,11 +19,11 @@ The application will include:
 - Dependency Injection
 - Fluent API for database mappings
 
----
+
 
 ## Project Structure
 The project follows the **Clean Architecture** pattern:
-
+```
 Library/
 ├── Domain/             # Contains entities and business logic
 │   ├── Entities/
@@ -34,8 +34,8 @@ Library/
 ├── Presentation/       # Entry point for the application (Console or API)
 ├── appsettings.json    # Configuration for database and app settings
 ├── Program.cs          # Main entry point of the application
+```
 
----
 
 ## Getting Started
 
@@ -57,7 +57,7 @@ Library/
 4. Run the application:
    dotnet run
 
----
+
 
 ## Commit History
 - **Initial Structure**: Set up project folder structure following Clean Architecture principles.
