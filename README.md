@@ -24,6 +24,30 @@ The application will include:
 - Dependency Injection
 - Fluent API for database mappings
 
+## Dependencies
+
+The project uses the following NuGet packages:
+
+### Core Dependencies
+- **Microsoft.EntityFrameworkCore**: Provides the core functionality for Entity Framework Core.
+- **Microsoft.EntityFrameworkCore.SqlServer**: SQL Server provider for Entity Framework Core.
+- **Microsoft.EntityFrameworkCore.Design**: Tools for design-time EF Core operations like migrations.
+
+### Dependency Injection and Configuration
+- **Microsoft.Extensions.DependencyInjection**: Provides the built-in DI container for .NET.
+- **Microsoft.Extensions.Configuration**: Configuration framework for .NET applications.
+- **Microsoft.Extensions.Configuration.Json**: Enables configuration from `appsettings.json`.
+
+### Testing (Future Steps)
+- **Moq** *(to be added)*: For mocking dependencies during unit testing.
+- **xUnit** *(to be added)*: Test framework for running unit tests.
+
+### How to Restore Dependencies
+Run the following command to restore all dependencies:
+```bash
+dotnet restore
+```
+
 ## Project Structure
 The project follows the **Clean Architecture** pattern:
 ```
