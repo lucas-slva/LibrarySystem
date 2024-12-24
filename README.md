@@ -1,5 +1,10 @@
 
 # LibrarySystem
+![.NET](https://img.shields.io/badge/.NET-9.0-blue?style=flat-square&logo=dotnet)
+![Entity Framework Core](https://img.shields.io/badge/Entity%20Framework%20Core-9.0-00599C?style=flat-square&logo=nuget)
+![SQL Server](https://img.shields.io/badge/SQL%20Server-Latest-red?style=flat-square&logo=microsoftsqlserver)
+![Clean Architecture](https://img.shields.io/badge/Clean%20Architecture-Pattern-brightgreen?style=flat-square)
+![License](https://img.shields.io/github/license/lucas-slva/LibrarySystem?style=flat-square)
 
 ## Overview
 LibrarySystem is a backend application designed to manage a digital library. This project is intended to demonstrate expertise in .NET, Entity Framework Core, SQL Server, and clean coding practices.
@@ -9,7 +14,7 @@ The application will include:
 - **User Management**: Registering users who can borrow books.
 - **Loan Records**: Tracking book loans, including due dates and return statuses.
 
----
+
 
 ## Technologies Used
 - .NET 9
@@ -62,7 +67,7 @@ Library/
 ## Commit History
 - **Initial Structure**: Set up project folder structure following Clean Architecture principles.
 
----
+
 
 ## Next Steps
 1. Model the database by creating the `Book`, `User`, and `Loan` entities.
