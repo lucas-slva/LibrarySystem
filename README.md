@@ -1,4 +1,4 @@
-
+<a id="readme-top"></a>
 # LibrarySystem
 ![.NET](https://img.shields.io/badge/.NET-9.0-blue?style=flat-square&logo=dotnet)
 ![Entity Framework Core](https://img.shields.io/badge/Entity%20Framework%20Core-9.0-00599C?style=flat-square&logo=nuget)
@@ -7,144 +7,135 @@
 ![Clean Architecture](https://img.shields.io/badge/Clean%20Architecture-Pattern-brightgreen?style=flat-square)
 ![License](https://img.shields.io/github/license/lucas-slva/LibrarySystem?style=flat-square)
 
-## Overview
+&nbsp;
+
+## 📖 Overview
 LibrarySystem is a backend application designed to manage a digital library. This project is intended to demonstrate expertise in .NET, Entity Framework Core, SQL Server, and clean coding practices.
 
 The application will include:
-- **Book Management**: Adding, updating, and querying books.
-- **User Management**: Registering users who can borrow books.
-- **Loan Records**: Tracking book loans, including due dates and return statuses.
+* **Book Management**: Adding, updating, and querying books.
+* **User Management**: Registering users who can borrow books.
+* **Loan Records**: Tracking book loans, including due dates and return statuses.
 
-## Technologies Used
-- .NET 9
-- Entity Framework Core
-- SQL Server
-- Docker
-- Clean Architecture Principles
-- Dependency Injection
-- Fluent API for database mappings
+&nbsp;
 
-## Dependencies
+### 🚀 Features
 
-The project uses the following NuGet packages:
+- **Clean Architecture**: Well-structured project organization.
+- **Entity Framework Core**: For database access and migrations.
+- **Docker**: Simplified SQL Server setup for local development.
+- **Validation**: Centralized business logic to ensure database consistency.
 
-### Core Dependencies
-- **Microsoft.EntityFrameworkCore**: Provides the core functionality for Entity Framework Core.
-- **Microsoft.EntityFrameworkCore.SqlServer**: SQL Server provider for Entity Framework Core.
-- **Microsoft.EntityFrameworkCore.Design**: Tools for design-time EF Core operations like migrations.
+&nbsp;
 
-### Dependency Injection and Configuration
-- **Microsoft.Extensions.DependencyInjection**: Provides the built-in DI container for .NET.
-- **Microsoft.Extensions.Configuration**: Configuration framework for .NET applications.
-- **Microsoft.Extensions.Configuration.Json**: Enables configuration from `appsettings.json`.
+### 🛠️ Technologies
 
-### Testing (Future Steps)
-- **Moq** *(to be added)*: For mocking dependencies during unit testing.
-- **xUnit** *(to be added)*: Test framework for running unit tests.
+- **.NET 9**
+- **Entity Framework Core**
+- **SQL Server** (via Docker)
+- **Dependency Injection**
+- **Fluent API** for database mappings
 
-### How to Restore Dependencies
-Run the following command to restore all dependencies:
-```bash
-dotnet restore
-```
+<br><br>
 
-## Project Structure
-The project follows the **Clean Architecture** pattern:
-```
-Library/
-├── Domain/             # Contains entities and business logic
-│   ├── Entities/
-├── Application/        # Application-level services and interfaces
-├── Infrastructure/     # Handles database and external integrations
-│   ├── Context/        # DbContext for EF Core
-│   ├── Mappings/       # Fluent API entity configurations
-├── Presentation/       # Entry point for the application (Console or API)
-├── appsettings.json    # Configuration for database and app settings
-├── Program.cs          # Main entry point of the application
-```
-
-## Getting Started
+## 🏁 Getting Started
 
 ### Prerequisites
-- .NET 9 SDK installed
-- Docker Desktop installed
-- Visual Studio, Rider, or another .NET-compatible IDE
+To get started, ensure you have the following installed:
 
-### Setting Up SQL Server with Docker
-This project requires a SQL Server instance to run. You can use Docker to create a local SQL Server instance:
+- [.NET 9 SDK](https://dotnet.microsoft.com/)
+- [Docker Desktop](https://www.docker.com/products/docker-desktop)
 
-1. Run the following command to start a SQL Server container:
-   ```
-      docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=YourStrong@Passw0rd" -p 1433:1433 --name sqlserver -d mcr.microsoft.com/mssql/server:2022-latest
-   ```
+&nbsp;
 
-3. Verify that the container is running:
-   ```
-   docker ps
-   ```
+### Installation
 
-5. Use the following connection string in the `appsettings.json` file:
-   ```
-   {
-     "ConnectionStrings":
-     {
-       "DefaultConnection": "Server=localhost,1433;Database=LibraryDb;User=sa;Password=YourStrong@Passw0rd;TrustServerCertificate=True"
-     }
-   }
-   ```
+Follow these steps to set up the project:
 
-6. Apply migrations to create the database:
-   ```
-   dotnet ef database update
-   ```
-
-And now your database should be ready for use 🚀🚀
-
-## Running the Application
-1. Clone the repository:
+1. Clone the Repository
+   ```bash
    git clone https://github.com/lucas-slva/LibrarySystem.git
+  
+&nbsp;
 
-2. Navigate to the project directory:
-   cd LibrarySystem
+2. Run SQL Server with Docker Start a SQL Server container using Docker:
+   ```bash
+   docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=YourStrong@Passw0rd" -p 1433:1433 --name sqlserver -d mcr.microsoft.com/mssql/server:2022-latest
 
-3. Restore dependencies:
+&nbsp;
+
+3. Restore Dependencies Restore all required NuGet packages:
+   ```bash
    dotnet restore
 
-4. Run the application:
+&nbsp;
+
+4. Create Migration Generate the database schema with the following command:
+   ```bash
+   dotnet ef migrations add InitialCreate
+
+&nbsp;
+
+5. Apply Migrations Update the database schema:
+   ```bash
+   dotnet ef database update
+
+&nbsp;
+
+6. Run the Application Start the Console App:
+   ```bash
    dotnet run
 
-## Commit History
+<br><br>
 
-- **Initial Structure**
-  - Set up the project folder structure following Clean Architecture principles.
+## 📜 Commit History
 
-- **Database Models and Configuration**
-  - Added domain models:
-    - `Book`
-    - `User`
-    - `Loan`
-      
-  - Configured Fluent API mappings for the domain models.
+1. **Initial Structure**
+   - Set up the project folder structure following Clean Architecture principles.
+
+&nbsp;
+
+2. **Database Models and Configuration**
+   - **2.1. Added Domain Models**
+     - `Book`
+     - `User`
+     - `Loan`
+   - **2.2. Configured Fluent API Mappings**
+     - Mapped constraints, relationships, and indexes for domain models.
+   - **2.3. Created and Configured**
+     - `LibraryDbContext`
+     - Design-time `LibraryDbContextFactory`
+   - **2.4. Implemented Dependency Injection**
+     - Added DI configuration for the `LibraryDbContext` in a Console App.
+   - **2.5. Generated and Applied Migration**
+     - Created the `InitialCreate` migration.
+     - Applied the migration to create the `LibraryDb` database with tables:
+       - `Books`
+       - `Users`
+       - `Loans`
     
-  - Created and configured:
-    - `LibraryDbContext`
-    - Design-time `LibraryDbContextFactory`
-  - Implemented Dependency Injection for a Console App.
-    
-  - Generated the `InitialCreate` migration.
-    
-  - Applied the migration to create the `LibraryDb` database with the following tables:
-    - `Books`
-    - `Users`
-    - `Loans`
-      
-## Next Steps
-1. Create basic services for domain operations:
-   - `BookService`: To manage books (add, update, query).
-   - `UserService`: To manage users.
-   - `LoanService`: To handle book loans.
-     
-2. Implement repository patterns for better data access abstraction.
-3. Add unit tests for services and repository methods to ensure robustness.
-4. Populate the database with seed data for testing purposes.
-5. Enhance the documentation by adding examples of queries and operations.
+&nbsp;
+
+3. **Services and Interfaces**
+   - **3.1. Implemented Services**
+     - `BookService`
+     - `UserService`
+     - `LoanService`
+   - **3.2. Created Interfaces**
+     - `IBookService`
+     - `IUserService`
+     - `ILoanService`
+
+&nbsp;
+
+4. **Documentation and README Improvements**
+   - **4.1. Updated the README.md**
+     - Added clear installation instructions.
+     - Highlighted features and technologies used.
+     - Included a **C# icon** for a polished presentation.
+     - Organized commit history for better readability.
+
+<br><br>
+
+## 📜 License
+This project is licensed under the `MIT License`. See the LICENSE file for details.
