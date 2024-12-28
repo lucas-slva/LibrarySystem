@@ -88,6 +88,19 @@ Follow these steps to set up the project:
 
 <br><br>
 
+## 🧪 Unit Tests
+
+This project includes unit tests to validate the core functionalities of the services:
+- `LoanService`
+- `UserService`
+
+### Running the Tests
+To run the tests, use the following command:
+```bash
+dotnet test
+```
+<br><br>
+
 ## 📜 Commit History
 
 1. **Initial Structure**
@@ -135,6 +148,22 @@ Follow these steps to set up the project:
      - Included a **C# icon** for a polished presentation.
      - Organized commit history for better readability.
 
+&nbsp;
+
+5. **Unit Testing**
+   - **5.1. Added Unit Tests for Services**
+     - `LoanServiceTests`:
+       - Validates loan creation with valid and invalid data.
+       - Ensures proper exception handling when conditions aren't met.
+     - `UserServiceTests`:
+       - Validates user creation and duplicate email prevention.
+       - Tests retrieval of all users.
+   - **5.2. Improved Testing Workflow**
+     - Mocked dependencies for repositories using Moq.
+     - Ensured comprehensive coverage of service methods.
+   - **5.3. Updated README**
+     - Added instructions to run unit tests using `dotnet test`.
+       
 <br><br>
 
 ## 📜 License
