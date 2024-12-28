@@ -171,7 +171,14 @@ This project is licensed under the `MIT License`. See the LICENSE file for detai
 <br><br>
 
 ## 🤝 Contributing
-Contributions, issues, and feature requests are welcome!
-Feel free to check the [issues page](../../issues/) if you want to contribute.
+
+We welcome contributions from the community! Whether you're fixing a bug, adding a new feature, or improving the documentation, your help is appreciated.
+
+### Getting Started
+
+1. Check the [Issues Page](../../issues/) for tasks to work on.
+2. Comment on an issue to let others know you're working on it.
+3. Fork the repository and create a branch for your work.
+4. Submit a Pull Request (PR) when you're ready!
 
 <br><br>
