@@ -167,3 +167,11 @@ dotnet test
 
 ## 📜 License
 This project is licensed under the `MIT License`. See the LICENSE file for details.
+
+<br><br>
+
+## 🤝 Contributing
+Contributions, issues, and feature requests are welcome!
+Feel free to check the [issues page](../../issues/) if you want to contribute.
+
+<br><br>
