@@ -15,6 +15,11 @@ public class Repository<TEntity>(LibraryDbContext dbContext) : IRepository<TEnti
         return await _dbSet.FindAsync(id);
     }
 
+    public async Task<TEntity?> FirstOrDefaultAsync(Func<TEntity, bool> predicate)
+    {
+        return await Task.FromResult(_dbSet.AsEnumerable().FirstOrDefault(predicate));
+    } 
+    
     public async Task<IEnumerable<TEntity>> GetAllAsync()
     {
         return await _dbSet.ToListAsync();

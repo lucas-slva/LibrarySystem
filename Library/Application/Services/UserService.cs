@@ -13,12 +13,14 @@ public class UserService(IRepository<User> repository) : IUserService
         ValidationHelper.ValidateStrings(
             (user.Name, nameof(user.Name)),
             (user.Email, nameof(user.Email)));
-        
+
         var existingUser = await _repository.FindAsync(u => u.Email == user.Email);
         if (existingUser.Any())
         {
             throw new InvalidOperationException("A user with the same email already exists.");
         }
+
+        await _repository.AddAsync(user);
     }
 
     public async Task<IEnumerable<User>> GetAllUsersAsync()

@@ -5,6 +5,7 @@ namespace Library.Application.Interfaces;
 public interface IRepository<TEntity> where TEntity : class
 {
     Task<TEntity?> GetByIdAsync(int id);
+    Task<TEntity?> FirstOrDefaultAsync(Func<TEntity, bool> predicate);
     Task<IEnumerable<TEntity>> GetAllAsync();
     Task AddAsync(TEntity entity);
     Task UpdateAsync(TEntity entity);
