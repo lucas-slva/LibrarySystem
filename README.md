@@ -5,7 +5,6 @@
 ![SQL Server](https://img.shields.io/badge/SQL%20Server-Latest-red?style=flat-square&logo=microsoftsqlserver)
 ![Docker](https://img.shields.io/badge/Docker-Container-blue?style=flat-square&logo=docker)
 ![Clean Architecture](https://img.shields.io/badge/Clean%20Architecture-Pattern-brightgreen?style=flat-square)
-![License](https://img.shields.io/github/license/lucas-slva/LibrarySystem?style=flat-square)
 
 &nbsp;
 
