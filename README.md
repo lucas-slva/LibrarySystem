@@ -140,16 +140,7 @@ dotnet test
 
 &nbsp;
 
-4. **Documentation and README Improvements**
-   - **4.1. Updated the README.md**
-     - Added clear installation instructions.
-     - Highlighted features and technologies used.
-     - Included a **C# icon** for a polished presentation.
-     - Organized commit history for better readability.
-
-&nbsp;
-
-5. **Unit Testing**
+4. **Unit Testing**
    - **5.1. Added Unit Tests for Services**
      - `LoanServiceTests`:
        - Validates loan creation with valid and invalid data.
